@@ -15,6 +15,6 @@ $this->registerModule(
 	/* Name */			"feedEntries",
 	/* Description*/		"Integrate feed entries in your templates",
 	/* Author */			"Pep",
-	/* Version */			'1.0.1'
+	/* Version */			'1.0.2'
 );
 ?>

@@ -289,12 +289,12 @@ class feedEntriesTemplates
 	 */
 	public static function FeedEntryPubdate($attr)
 	{
-		$fmt = $GLOBALS['core']->blog->settings->date_format;
+		$fmt = $GLOBALS['core']->blog->settings->system->date_format;
 		if (!empty($attr['format'])) {
 			$fmt = $attr['format'];
 		}
 		$f = $GLOBALS['core']->tpl->getFilters($attr);
-		return '<?php echo '.sprintf($f,'dt::str("'.$fmt.'",$_ctx->feed->items[$_ctx->feed_idx]->TS,$core->blog->settings->blog_timezone)').'; ?>';
+		return '<?php echo '.sprintf($f,'dt::str("'.$fmt.'",$_ctx->feed->items[$_ctx->feed_idx]->TS,$core->blog->settings->system->blog_timezone)').'; ?>';
 	}
 }
 
